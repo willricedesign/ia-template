@@ -1,0 +1,125 @@
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row; }
+
+.sidenav {
+  min-width: 48px;
+  height: 100%;
+  background: #430E32;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: min-width 200ms cubic-bezier(0.86, 0, 0.07, 1); }
+  .sidenav.open {
+    min-width: 280px; }
+
+.logo-type, .link-text {
+  transition: opacity 250ms ease-in-out; }
+  .logo-type.hidden, .link-text.hidden {
+    transition: opacity 50ms ease-in-out;
+    opacity: 0; }
+  .logo-type.display-none, .link-text.display-none {
+    display: none; }
+
+.logo-symbol {
+  background-image: url("/images/udemy-symbol.png");
+  height: 100%;
+  width: 40px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto; }
+
+.logo-type {
+  height: 100%;
+  width: 90px;
+  float: left;
+  background-image: url("/images/udemy-type.png");
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  background-size: auto;
+  box-sizing: border-box;
+  opacity: 1; }
+
+.sidenav-primary-link, .logo {
+  height: 56px;
+  width: 100%;
+  cursor: pointer; }
+
+.sidenav-primary-link:hover {
+  background-color: #6E1A52; }
+
+.link-icon {
+  width: 48px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center;
+  float: left;
+  box-sizing: border-box; }
+
+.link-text {
+  width: auto;
+  height: 100%;
+  text-align: left;
+  color: white;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-left: 8px;
+  font-weight: 600;
+  font-size: 16px; }
+
+.courses .link-icon {
+  background-image: url("/images/icon-courses.png"); }
+  .courses .link-icon:before {
+    content: '';
+    height: 100%;
+    width: 4px;
+    background-color: #EC5252;
+    position: relative;
+    float: left; }
+
+.comms .link-icon {
+  background-image: url("/images/icon-comms.png"); }
+
+.perf .link-icon {
+  background-image: url("/images/icon-perf.png"); }
+
+.tools .link-icon {
+  background-image: url("/images/icon-tools.png"); }
+
+.resources .link-icon {
+  background-image: url("/images/icon-resources.png"); }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box; }
+
+.grid {
+  background-color: #E8E9EB;
+  max-width: 1140px;
+  height: 100%;
+  width: 100%; }
