@@ -132,7 +132,7 @@ html, body {
 }
 
 .logo-symbol {
-  background-image: url('/images/udemy-symbol.png');
+  background-image: url('../images/udemy-symbol.png');
   height: 100%;
   width: 40px;
   float: left;
@@ -145,7 +145,7 @@ html, body {
   height: 100%;
   width: 90px;
   float: left;
-  background-image: url('/images/udemy-type.png');
+  background-image: url('../images/udemy-type.png');
   background-repeat: no-repeat;
   background-position: 6px center;
   background-size: auto;
@@ -191,7 +191,7 @@ html, body {
 
 
 .courses .link-icon {
-  background-image: url('/images/icon-courses.png');
+  background-image: url('../images/icon-courses.png');
   &:before {
     content: '';
     height: 100%;
@@ -203,19 +203,19 @@ html, body {
 }
 
 .comms .link-icon {
-  background-image: url('/images/icon-comms.png');
+  background-image: url('../images/icon-comms.png');
 }
 
 .perf .link-icon {
-  background-image: url('/images/icon-perf.png');
+  background-image: url('../images/icon-perf.png');
 }
 
 .tools .link-icon {
-  background-image: url('/images/icon-tools.png');
+  background-image: url('../images/icon-tools.png');
 }
 
 .resources .link-icon {
-  background-image: url('/images/icon-resources.png');
+  background-image: url('../images/icon-resources.png');
 }
 
 // ------------ Grid styles
