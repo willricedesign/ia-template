@@ -98,24 +98,34 @@ html, body {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  z-index: -1000;
 }
 
+// ------------ Sidenav container
 
+.sidenav-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-container-expanded {
+  min-width: 280px;
+}
 
 // ------------ sidenav styles
+
 .sidenav {
-  min-width: 48px;
+  width: 56px;
   height: 100%;
   background: $color-purple-darker;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   //shouldn't be animating min - width—poor performance.
   //See: html5rocks.com/en/tutorials/speed/high-performance-animations/
-  transition: min-width 200ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: width 200ms cubic-bezier(0.86, 0, 0.07, 1);
 
   &.open {
-    min-width: 280px;
+    width: 280px;
   }
 }
 
@@ -188,18 +198,20 @@ html, body {
 
 //specific link styles
 
-
+.primary-active {
+  &:before {
+    content: '';
+    height: 24px;
+    width: 4px;
+    background-color: $color-primary;
+    position: absolute;
+    left:0;
+    margin-top: 16px;
+  }
+}
 
 .courses .link-icon {
   background-image: url('../images/icon-courses.png');
-  &:before {
-    content: '';
-    height: 100%;
-    width: 4px;
-    background-color: $color-primary;
-    position: relative;
-    float: left;
-  }
 }
 
 .comms .link-icon {
@@ -218,6 +230,35 @@ html, body {
   background-image: url('../images/icon-resources.png');
 }
 
+// ------------ Secondary styles
+
+.secondary-sidenav {
+  width: 280px;
+  height: 100%;
+  background-color: $color-rain-lighter;
+  position: absolute;
+  z-index: -100;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 48px;
+  color: $color-purple;
+
+  ul {
+    list-style-type: none;
+    margin-top: 32px;
+    font-size: 16px;
+    li {
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.secondary-hidden {
+  opacity: 0 !important;
+  display: none;
+}
+
 // ------------ Grid styles
 
 .container {
@@ -231,8 +272,11 @@ html, body {
 }
 
 .grid {
-  background-color: $color-rain-light;
+  background-color: $color-rain-dark;
   max-width: 1140px;
   height: 100%;
   width: 100%;
+  color: $color-midnight-light;
+  font-size: 24px;
+  padding-top: 20%;
 }

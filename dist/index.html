@@ -1,25 +1,28 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
 
-    <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#2F3BA2">
 
-  </head>
-  <body>
-    <!-- Add your site or app content here -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+
+</head>
+
+<body>
+  <!-- Add your site or app content here -->
+  <div class="sidenav-container sidenav-container-expanded">
     <div class="sidenav">
 
       <div class="logo">
@@ -27,39 +30,54 @@
         <div class="logo-type hidden display-none"></div>
       </div>
 
-      <div class="sidenav-primary-link courses">
+      <div class="sidenav-primary-link courses primary-active">
         <div class="link-icon"></div>
         <div class="link-text hidden display-none">Courses</div>
       </div>
 
       <div class="sidenav-primary-link comms">
-          <div class="link-icon"></div>
-          <div class="link-text hidden display-none">Communication</div>
+        <div class="link-icon"></div>
+        <div class="link-text hidden display-none">Communication</div>
       </div>
 
       <div class="sidenav-primary-link perf">
-          <div class="link-icon"></div>
-          <div class="link-text hidden display-none">Performance</div>
+        <div class="link-icon"></div>
+        <div class="link-text hidden display-none">Performance</div>
       </div>
 
       <div class="sidenav-primary-link tools">
-          <div class="link-icon"></div>
-          <div class="link-text hidden display-none">Tools</div>
+        <div class="link-icon"></div>
+        <div class="link-text hidden display-none">Tools</div>
       </div>
 
       <div class="sidenav-primary-link resources">
-          <div class="link-icon"></div>
-          <div class="link-text hidden display-none">Resources</div>
+        <div class="link-icon"></div>
+        <div class="link-text hidden display-none">Resources</div>
       </div>
     </div>
 
-    <div  class="container">
-      <div class="grid"></div>
+    <div class="secondary-sidenav">
+      <ul>
+        <li>All</li>
+        <li>Q&A</li>
+        <li>Messages</li>
+        <li>Assignments</li>
+        <li>Announcements</li>
+      </ul>
+
     </div>
 
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
 
-  </body>
+  </div>
+
+  <div class="container">
+    <div class="grid">GRID CONTAINER</div>
+  </div>
+
+  <!-- build:js scripts/main.min.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+
 </html>

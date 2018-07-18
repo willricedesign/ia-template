@@ -17,18 +17,25 @@ html, body {
   height: 100%;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  z-index: -1000; }
+
+.sidenav-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.sidenav-container-expanded {
+  min-width: 280px; }
 
 .sidenav {
-  min-width: 48px;
+  width: 56px;
   height: 100%;
   background: #430E32;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  transition: min-width 200ms cubic-bezier(0.86, 0, 0.07, 1); }
+  transition: width 200ms cubic-bezier(0.86, 0, 0.07, 1); }
   .sidenav.open {
-    min-width: 280px; }
+    width: 280px; }
 
 .logo-type, .link-text {
   transition: opacity 250ms ease-in-out; }
@@ -87,15 +94,17 @@ html, body {
   font-weight: 600;
   font-size: 16px; }
 
+.primary-active:before {
+  content: '';
+  height: 24px;
+  width: 4px;
+  background-color: #EC5252;
+  position: absolute;
+  left: 0;
+  margin-top: 16px; }
+
 .courses .link-icon {
   background-image: url("../images/icon-courses.png"); }
-  .courses .link-icon:before {
-    content: '';
-    height: 100%;
-    width: 4px;
-    background-color: #EC5252;
-    position: relative;
-    float: left; }
 
 .comms .link-icon {
   background-image: url("../images/icon-comms.png"); }
@@ -109,6 +118,28 @@ html, body {
 .resources .link-icon {
   background-image: url("../images/icon-resources.png"); }
 
+.secondary-sidenav {
+  width: 280px;
+  height: 100%;
+  background-color: #F2F3F5;
+  position: absolute;
+  z-index: -100;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 48px;
+  color: #853C6C; }
+  .secondary-sidenav ul {
+    list-style-type: none;
+    margin-top: 32px;
+    font-size: 16px; }
+    .secondary-sidenav ul li {
+      margin-bottom: 16px;
+      cursor: pointer; }
+
+.secondary-hidden {
+  opacity: 0 !important;
+  display: none; }
+
 .container {
   display: flex;
   align-items: center;
@@ -119,7 +150,10 @@ html, body {
   box-sizing: border-box; }
 
 .grid {
-  background-color: #E8E9EB;
+  background-color: #CACBCC;
   max-width: 1140px;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  color: #505763;
+  font-size: 24px;
+  padding-top: 20%; }
